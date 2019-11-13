@@ -1,0 +1,16 @@
+{% extends "Blog/base.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>{% block title %} {{ object.blog_title }} {% endblock title %}</h1>
+        <p class=" text-muted">{{ post.blog_author }} | {{ post.created_on }}</p>
+      </div>
+    </div>
+    {% block sidebar %} {% include 'Blog/sidebar.html' %} {% endblock sidebar %}
+  </div>
+</div>
+
+{% endblock content %}
